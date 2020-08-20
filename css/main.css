@@ -310,9 +310,6 @@ textarea {
 
 /* Логотип */
 .logo {
-  display: block;
-  padding-top: 16px;
-  padding-bottom: 16px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 24px;
@@ -327,6 +324,10 @@ textarea {
   color: #212121;
 }
 
+.logo .white-studio {
+  color: #ffffff;
+}
+
 .logo.animate__pulse {
   animation-duration: 1000ms;
 }
@@ -335,6 +336,31 @@ textarea {
   .logo {
     font-size: 26px;
     line-height: 1.19;
+  }
+}
+
+/* "Эффект присутствия на странице */
+.nav-link.current {
+  position: relative;
+  display: inline-block;
+  color: #2196f3;
+}
+
+.nav-link.current::after {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  content: '';
+  height: 4px;
+  border-radius: 2px;
+  background-color: #2196f3;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-link.current {
+    padding-bottom: 8px;
   }
 }
 
@@ -380,11 +406,83 @@ textarea {
 }
 
 /*                                        Шапка сайта  */
-/* Навигация */
-.nav-linkD {
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+@media screen and (min-width: 768px) {
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.button-menu {
+  display: inline-flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: transparent;
+}
+
+.button-menu .icon-cross {
+  display: none;
+}
+
+.button-menu.is-open .icon-cross {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+}
+
+.button-menu.is-open .icon-menu {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .button-menu {
+    display: none;
+  }
+}
+
+.menu-wrapper {
+  background-color: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-wrapper {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+    text-align: center;
+    display: none;
+  }
+  .menu-wrapper.is-open {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-wrapper {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Навигация */
+.nav-link {
+  display: block;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -392,8 +490,15 @@ textarea {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-linkD:hover, .nav-linkD:focus {
+.nav-link:hover, .nav-link:focus {
   color: #2196f3;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .contakt-linkD {
@@ -408,19 +513,11 @@ textarea {
   color: #2196f3;
 }
 
-.headerD {
-  border-bottom: 1px solid #ececec;
-}
-
-.headerD .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navD {
-  display: flex;
-  align-items: center;
+@media screen and (min-width: 768px) {
+  .nav-list {
+    display: flex;
+    margin-right: 84px;
+  }
 }
 
 .nav-listD {
@@ -428,9 +525,11 @@ textarea {
   margin-left: 85px;
 }
 
-.contakt-listD {
-  display: flex;
-  align-items: center;
+@media screen and (min-width: 1200px) {
+  .contakt-list {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .contakt-list .linkD {

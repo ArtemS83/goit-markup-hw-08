@@ -19,10 +19,28 @@
     <!-- Шапка сайта -->
     <header class="header">
       <div class="container">
-        <a class="logo link animate__pulse" href="./index.html" lang="en"
-          ><span class="logo-web">Web</span>
-          <span class="black-studio">Studio</span>
-        </a>
+        <div class="menu-container">
+          <a class="logo link animate__pulse" href="./index.html" lang="en"
+            ><span class="logo-web">Web</span>
+            <span class="black-studio">Studio</span>
+          </a>
+          <button
+            class="button-menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="menu-wrapper"
+            aria-label="переключатель мобильного меню"
+            data-menu-button
+          >
+            <svg width="40" height="40">
+              <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+              <use
+                class="icon-cross"
+                href="./images/sprite.svg#icon-cross"
+              ></use>
+            </svg>
+          </button>
+        </div>
         <div class="menu-wrapper" data-menu>
           <nav class="nav">
             <ul class="nav-list list">

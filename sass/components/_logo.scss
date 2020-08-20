@@ -1,8 +1,6 @@
 /* Логотип */
 .logo {
-  display: block;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  // display: inline-block;
 
   font-family: $font-logo;
   font-weight: 700;
@@ -14,6 +12,9 @@
   }
   & .black-studio {
     color: $main-title-color;
+  }
+  & .white-studio {
+    color: $main-write-color;
   }
   // Анимация логотипа
   &.animate__pulse {

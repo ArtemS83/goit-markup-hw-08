@@ -1,18 +1,23 @@
 /* "Эффект присутствия на странице */
-.nav-list .item {
-  position: relative;
-}
+
 .nav-link.current {
+  position: relative;
+  display: inline-block;
   color: $hover-color;
   &::after {
     position: absolute;
-    width: 100%;
+    left: 50%;
     bottom: 0;
+    transform: translateX(-50%);
+
+    width: 100%;
 
     content: '';
     height: 4px;
     border-radius: 2px;
     background-color: $hover-color;
-    display: block;
+  }
+  @media screen and (max-width: 767px) {
+    padding-bottom: 8px;
   }
 }

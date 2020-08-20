@@ -1,12 +1,14 @@
 @import './base/fonts';
 @import './base/modern-normalize';
 @import './utils/variables';
+@import './utils/breakpoints';
 @import './utils/placeholders';
 @import './utils/mixins';
 @import './base/base';
+@import './components/logo';
 @import './components/current';
 @import './components/visually-hidden';
 @import './components/container';
 @import './layout/header';
-@import './layout/portfolio-section';
-@import './layout/footer';
+// @import './layout/portfolio-section';
+// @import './layout/footer';

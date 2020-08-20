@@ -4,6 +4,7 @@
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  // Аутлайн для визуализации
   outline: 1px solid red;
   @media screen and (min-width: $mobile) {
     width: $mobile;
