@@ -1,0 +1,18 @@
+/* "Эффект присутствия на странице */
+.nav-list .item {
+  position: relative;
+}
+.nav-link.current {
+  color: $hover-color;
+  &::after {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    content: '';
+    height: 4px;
+    border-radius: 2px;
+    background-color: $hover-color;
+    display: block;
+  }
+}

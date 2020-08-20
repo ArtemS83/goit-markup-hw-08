@@ -1,0 +1,766 @@
+@charset "UTF-8";
+/* Подключение локального шрифта Raleway-700 - latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  /* Добавляем вручную это свойство для отображения шрифта до загрузки */
+  src: local("Raleway Bold"), local("Raleway-Bold"), url("../fonts/raleway-v16-latin-700.woff2") format("woff2"), url("../fonts/raleway-v16-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/*! modern-normalize v0.7.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
+/**
+Use a better box model (opinionated).
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/**
+Use a more readable tab size (opinionated).
+*/
+:root {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+/**
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+*/
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/*
+Sections
+========
+*/
+/**
+Remove the margin in all browsers.
+*/
+body {
+  margin: 0;
+}
+
+/**
+Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+*/
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/*
+Grouping content
+================
+*/
+/**
+Add the correct height in Firefox.
+*/
+hr {
+  height: 0;
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+abbr[title] {
+  text-decoration: underline dotted;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+1. Remove the inheritance of text transform in Firefox.
+*/
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
+.footer-social-item > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: #212121;
+  background-color: #ffffff;
+}
+
+/*                                    Общие сбросы свойств */
+/* Убираем точки и отступы в списках */
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Убираем подчеркивание в ссылках */
+.link {
+  text-decoration: none;
+}
+
+/* Убираем наклонность текста */
+.address {
+  font-style: normal;
+}
+
+/* Убираем эффект 2рх  и оптимизируем фото */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Убираем возможность изменять размер пользователю */
+textarea {
+  resize: none;
+}
+
+/* "Эффект присутствия на странице */
+.nav-list .item {
+  position: relative;
+}
+
+.nav-link.current {
+  color: #2196f3;
+}
+
+.nav-link.current::after {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  content: '';
+  height: 4px;
+  border-radius: 2px;
+  background-color: #2196f3;
+  display: block;
+}
+
+/* Скрываем визуально текст и чекбокс*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/*                                   Наш div.container */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* Линия и фон для проверки */
+  /* outline: 1px solid red; */
+  /* background-color: yellowgreen; */
+}
+
+/*                                        Шапка сайта  */
+/* Логотип */
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.logo-web {
+  color: #188ce8;
+}
+
+.black-studio {
+  color: #000000;
+}
+
+/* Анимация Логотипа */
+.animate__pulse {
+  animation-duration: 1000ms;
+}
+
+/* Навигация */
+.nav-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #212121;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover, .nav-link:focus {
+  color: #2196f3;
+}
+
+.contakt-link {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #757575;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contakt-link:hover, .contakt-link:focus {
+  color: #2196f3;
+}
+
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  margin-left: 85px;
+}
+
+.contakt-list {
+  display: flex;
+  align-items: center;
+}
+
+.contakt-list .link {
+  display: flex;
+}
+
+.nav-list .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contakt-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.icon-mail {
+  align-self: center;
+  width: 16px;
+  height: 11px;
+  margin-top: 1px;
+  margin-right: 10px;
+  fill: #757575;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contakt-link:hover .icon-mail,
+.contakt-link:focus .icon-mail {
+  fill: #2196f3;
+}
+
+.icon-phone {
+  align-self: center;
+  width: 10px;
+  height: 15px;
+  margin-right: 10px;
+  fill: #757575;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contakt-link:hover .icon-phone,
+.contakt-link:focus .icon-phone {
+  fill: #2196f3;
+}
+
+/*                                Секция Портфолио */
+.main-portfolio {
+  padding-top: 93px;
+  margin-bottom: 94px;
+}
+
+.filter-button {
+  border-width: 0;
+  padding-top: 6px;
+  padding-right: 22px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  margin: 0;
+  outline: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+  text-align: center;
+  background-color: #f5f4fa;
+  color: #212121;
+  border-radius: 4px;
+  border-color: transparent;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-button:hover, .filter-button:focus {
+  background-color: #2196f3;
+  color: #ffffff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.filter-button.current {
+  background-color: #2196f3;
+  color: #ffffff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
+  border-color: transparent;
+}
+
+.filter .filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter > .list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.portfolio-name {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: #212121;
+}
+
+.portfolio-web,
+.portfolio-design,
+.portfolio-app,
+.portfolio-marketing {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.88;
+  color: #757575;
+}
+
+.portfolio > .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-link {
+  display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-link:hover, .portfolio-link:focus {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-card {
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
+/* Кроме каждого третьего */
+.portfolio-item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+/* Кроме трех  последних с конца */
+.portfolio-item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+
+.portfolio-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-about {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 63px;
+  padding-right: 24px;
+  padding-bottom: 63px;
+  padding-left: 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  background-color: rgba(33, 150, 243, 0.9);
+  color: #ffffff;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-link:hover .portfolio-about,
+.portfolio-link:focus .portfolio-about {
+  transform: translateY(0);
+}
+
+/*                                          Подвал сайта */
+.footer {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer .container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer .logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.white-studio {
+  color: #ffffff;
+}
+
+.address-link {
+  line-height: 1.71;
+  color: #ffffff;
+}
+
+.address-mail {
+  line-height: 1.71;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.address-tel {
+  line-height: 1.71;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-join {
+  display: inline-block;
+  margin-bottom: 20px;
+  line-height: 1.14;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.accent-link {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accent-link:hover, .accent-link:focus {
+  color: #2196f3;
+}
+
+.footer-address .link {
+  display: inline-block;
+}
+
+.footer-address .link:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer-box-address {
+  /* margin-right: 69px; */
+  /* По макету стоит 69px,но не корректно узазаны границы первого бдока с лого */
+  margin-right: 83px;
+}
+
+.footer-box-social {
+  margin-right: 94px;
+}
+
+.footer-social-list {
+  display: flex;
+}
+
+.footer-social-item > a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social-item > a:hover, .footer-social-item > a:focus {
+  background-color: #2196f3;
+}
+
+.footer-social-item .icon {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+}
+
+.footer-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-form-input {
+  margin-right: 12px;
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 16px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form-input:hover, .footer-form-input:focus {
+  outline: 1px solid #ffffff;
+}
+
+.footer-form-button {
+  display: inline-flex;
+  align-items: center;
+  border-width: 0;
+  padding-top: 10px;
+  padding-right: 29px;
+  padding-bottom: 10px;
+  padding-left: 28px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background-color: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form-button:hover, .footer-form-button:focus {
+  outline: 1px solid #ffffff;
+}
+
+.footer-form-button .icon {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+}
+/*# sourceMappingURL=portfolio.css.map */

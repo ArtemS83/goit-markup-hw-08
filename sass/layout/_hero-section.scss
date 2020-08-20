@@ -1,0 +1,62 @@
+/*                       Hero */
+.hero {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+
+  text-align: center;
+  /* Зададим фон,чтобы было видно текст в случае медленной загрузки фонового изображения */
+  background-color: $text-color;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url('../images/hero/hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: $main-write-color;
+}
+.hero-button {
+  min-width: 200px;
+  padding-top: 10px;
+  padding-right: 32px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+
+  border-width: 0;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  background-color: $hover-color;
+  color: $main-write-color;
+  cursor: pointer;
+  outline: none;
+
+  transition: background-color $transition-duration-250ms $cubic-bezier,
+    outline $transition-duration-250ms $cubic-bezier;
+  &:hover,
+  &:focus {
+    background-color: #2196f3;
+    outline: 1px solid $main-write-color;
+  }
+}

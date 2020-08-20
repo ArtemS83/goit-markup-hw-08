@@ -1,0 +1,45 @@
+/* Секция О нас */
+.about {
+  padding-top: 94px;
+  padding-bottom: 47px;
+}
+.about-list {
+  display: flex;
+  /*  Можно также использовать. вместо то что ниже*/
+  /* justify-content: space-between; */
+}
+.about-item {
+  width: 270px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.about-name {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.about-description {
+  margin: 0;
+
+  line-height: 1.71;
+  color: $text-color;
+}
+
+.about-bg {
+  display: flex;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: 100px;
+  padding-left: 100px;
+  margin-bottom: 30px;
+  background-color: $background-color;
+  border-radius: 4px;
+}
+.about-icon {
+  width: 70px;
+  height: 70px;
+}

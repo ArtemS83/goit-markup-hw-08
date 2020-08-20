@@ -1,0 +1,1187 @@
+@charset "UTF-8";
+/* Подключение локального шрифта Raleway-700 - latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  /* Добавляем вручную это свойство для отображения шрифта до загрузки */
+  src: local("Raleway Bold"), local("Raleway-Bold"), url("../fonts/raleway-v16-latin-700.woff2") format("woff2"), url("../fonts/raleway-v16-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/*! modern-normalize v0.7.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
+/**
+Use a better box model (opinionated).
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/**
+Use a more readable tab size (opinionated).
+*/
+:root {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+/**
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+*/
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/*
+Sections
+========
+*/
+/**
+Remove the margin in all browsers.
+*/
+body {
+  margin: 0;
+}
+
+/**
+Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+*/
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/*
+Grouping content
+================
+*/
+/**
+Add the correct height in Firefox.
+*/
+hr {
+  height: 0;
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+abbr[title] {
+  text-decoration: underline dotted;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+1. Remove the inheritance of text transform in Firefox.
+*/
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
+.form-modal-checkbox-wrapper, .form-modal-btn, .name-social-item > a, .customers-item > a, .footer-social-item > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: #212121;
+  background-color: #ffffff;
+}
+
+/*                                    Общие сбросы свойств */
+/* Убираем точки и отступы в списках */
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Убираем подчеркивание в ссылках */
+.link {
+  text-decoration: none;
+}
+
+/* Убираем наклонность текста */
+.address {
+  font-style: normal;
+}
+
+/* Убираем эффект 2рх  и оптимизируем фото */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Убираем возможность изменять размер пользователю */
+textarea {
+  resize: none;
+}
+
+/* "Эффект присутствия на странице */
+.nav-list .item {
+  position: relative;
+}
+
+.nav-link.current {
+  color: #2196f3;
+}
+
+.nav-link.current::after {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  content: '';
+  height: 4px;
+  border-radius: 2px;
+  background-color: #2196f3;
+  display: block;
+}
+
+/* Скрываем визуально текст и чекбокс*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/*                                   Наш div.container */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* Линия и фон для проверки */
+  /* outline: 1px solid red; */
+  /* background-color: yellowgreen; */
+}
+
+/*                                        Шапка сайта  */
+/* Логотип */
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.logo-web {
+  color: #188ce8;
+}
+
+.black-studio {
+  color: #000000;
+}
+
+/* Анимация Логотипа */
+.animate__pulse {
+  animation-duration: 1000ms;
+}
+
+/* Навигация */
+.nav-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #212121;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover, .nav-link:focus {
+  color: #2196f3;
+}
+
+.contakt-link {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #757575;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contakt-link:hover, .contakt-link:focus {
+  color: #2196f3;
+}
+
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  margin-left: 85px;
+}
+
+.contakt-list {
+  display: flex;
+  align-items: center;
+}
+
+.contakt-list .link {
+  display: flex;
+}
+
+.nav-list .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contakt-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.icon-mail {
+  align-self: center;
+  width: 16px;
+  height: 11px;
+  margin-top: 1px;
+  margin-right: 10px;
+  fill: #757575;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contakt-link:hover .icon-mail,
+.contakt-link:focus .icon-mail {
+  fill: #2196f3;
+}
+
+.icon-phone {
+  align-self: center;
+  width: 10px;
+  height: 15px;
+  margin-right: 10px;
+  fill: #757575;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contakt-link:hover .icon-phone,
+.contakt-link:focus .icon-phone {
+  fill: #2196f3;
+}
+
+/*                       Hero */
+.hero {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  text-align: center;
+  /* Зададим фон,чтобы было видно текст в случае медленной загрузки фонового изображения */
+  background-color: #757575;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../images/hero/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.hero-button {
+  min-width: 200px;
+  padding-top: 10px;
+  padding-right: 32px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+  border-width: 0;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  background-color: #2196f3;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-button:hover, .hero-button:focus {
+  background-color: #2196f3;
+  outline: 1px solid #ffffff;
+}
+
+/*                               Модальное окно */
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 528px;
+  min-height: 581px;
+  padding-left: 40px;
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.form-modal-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+}
+
+.form-modal-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-modal-button:focus {
+  outline: none;
+  border-color: #2196f3;
+}
+
+.btn-close {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-modal-button:hover .btn-close,
+.form-modal-button:focus .btn-close {
+  fill: #2196f3;
+}
+
+.form-modal-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 28px;
+}
+
+.form-modal-comments-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-modal-checkbox-wrapper {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.form-modal-input {
+  margin: 0;
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 16px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: #757575;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-modal-input:focus, .form-modal-input:hover, .form-modal-input:focus:not(:placeholder-shown), .form-modal-input:hover:not(:placeholder-shown) {
+  border-color: #2196f3;
+  outline: none;
+}
+
+.form-modal-input:not(:placeholder-shown) {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.form-modal-textarea {
+  margin: 0;
+  width: 100%;
+  height: 120px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 16px;
+  padding-left: 16px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: #757575;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-modal-textarea:focus, .form-modal-textarea:hover, .form-modal-textarea:focus:not(:placeholder-shown), .form-modal-textarea:hover:not(:placeholder-shown) {
+  border-color: #2196f3;
+  outline: none;
+}
+
+.form-modal-textarea:not(:placeholder-shown) {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.form-modal-label {
+  position: absolute;
+  left: 42px;
+  top: 12px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: #757575;
+  transition: font-size 250ms cubic-bezier(0.4, 0, 0.2, 1), line-height 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-modal-input:focus + .form-modal-label,
+.form-modal-input:hover + .form-modal-label,
+.form-modal-input:not(:placeholder-shown) + .form-modal-label {
+  font-size: 12px;
+  line-height: 1.17;
+  color: #2196f3;
+  transform: translate(-28px, -30px);
+}
+
+.form-modal-textarea-label {
+  position: absolute;
+  left: 16px;
+  top: 12px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: #757575;
+  transition: font-size 250ms cubic-bezier(0.4, 0, 0.2, 1), line-height 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-modal-textarea:focus + .form-modal-textarea-label,
+.form-modal-textarea:hover + .form-modal-textarea-label,
+.form-modal-textarea:not(:placeholder-shown) + .form-modal-textarea-label {
+  font-size: 12px;
+  line-height: 1.17;
+  color: #2196f3;
+  transform: translate(-2px, -30px);
+}
+
+.form-modal-icon {
+  position: absolute;
+  left: 16px;
+  top: 11px;
+  width: 18px;
+  height: 18px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-modal-input:focus ~ .form-modal-icon,
+.form-modal-input:hover ~ .form-modal-icon,
+.form-modal-input:focus:not(:placeholder-shown) ~ .form-modal-icon,
+.form-modal-input:hover:not(:placeholder-shown) ~ .form-modal-icon {
+  fill: #2196f3;
+}
+
+.form-modal-input:not(:placeholder-shown) ~ .form-modal-icon {
+  fill: inherit;
+}
+
+.form-modal-checkbox-label {
+  line-height: 1.71;
+  color: #757575;
+  cursor: pointer;
+}
+
+/* Cделаем временно подчеркивание для визуализации */
+/* .form-modal-checkbox:checked ~ .form-modal-checkbox-label {
+color: red;
+} */
+.form-modal-icon-check {
+  margin-right: 8px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  fill: #ffffff;
+  cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* Для доступности при фокусе на чекбокс зададим тень */
+}
+
+.form-modal-checkbox:checked ~ .form-modal-icon-check {
+  border-color: transparent;
+  background-color: #2196f3;
+}
+
+.form-modal-checkbox:focus ~ .form-modal-icon-check,
+.form-modal-checkbox:hover ~ .form-modal-icon-check {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.form-modal-link {
+  color: #2196f3;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-modal-link:focus {
+  outline: none;
+  border: 1px solid #2196f3;
+  border-radius: 2px;
+}
+
+.form-modal-btn {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background-color: #2196f3;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  border-color: transparent;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-modal-btn:hover, .form-modal-btn:focus {
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-color: #2196f3;
+  outline: none;
+}
+
+/* Секция О нас */
+.about {
+  padding-top: 94px;
+  padding-bottom: 47px;
+}
+
+.about-list {
+  display: flex;
+  /*  Можно также использовать. вместо то что ниже*/
+  /* justify-content: space-between; */
+}
+
+.about-item {
+  width: 270px;
+}
+
+.about-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.about-name {
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.about-description {
+  margin: 0;
+  line-height: 1.71;
+  color: #757575;
+}
+
+.about-bg {
+  display: flex;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: 100px;
+  padding-left: 100px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+}
+
+.about-icon {
+  width: 70px;
+  height: 70px;
+}
+
+/*              Чем занимаемся секция */
+.offer {
+  padding-top: 47px;
+  padding-bottom: 94px;
+}
+
+.offer-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.offer-list {
+  display: flex;
+}
+
+.offer-item {
+  position: relative;
+}
+
+.offer-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.offer-name {
+  position: absolute;
+  width: 370px;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: #ffffff;
+}
+
+/* Секция Наша команда */
+.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: #f5f4fa;
+}
+
+.team-list {
+  display: flex;
+}
+
+.team-item {
+  display: block;
+  width: 270px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;
+}
+
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.team-name {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.team-position {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: #757575;
+}
+
+.name-social-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-card {
+  padding-top: 30px;
+  padding-bottom: 24px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.name-social-item > a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.name-social-item > a:hover, .name-social-item > a:focus {
+  background-color: #2196f3;
+}
+
+.name-social-icon {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.name-social-item > a:hover .name-social-icon,
+.name-social-item > a:focus .name-social-icon {
+  fill: #ffffff;
+}
+
+/* Секция Постоянные клиенты */
+.customers {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.customers-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.customers-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.customers-item > a {
+  width: 170px;
+  height: 90px;
+  border-radius: 4px;
+  border: 1px solid #afb1b8;
+  background-color: #ffffff;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customers-item > a:hover, .customers-item > a:focus {
+  border-color: #2196f3;
+}
+
+.customers-icon {
+  fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customers-item > a:hover .customers-icon,
+.customers-item > a:focus .customers-icon {
+  fill: #2196f3;
+}
+
+/*                                          Подвал сайта */
+.footer {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer .container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer .logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.white-studio {
+  color: #ffffff;
+}
+
+.address-link {
+  line-height: 1.71;
+  color: #ffffff;
+}
+
+.address-mail {
+  line-height: 1.71;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.address-tel {
+  line-height: 1.71;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-join {
+  display: inline-block;
+  margin-bottom: 20px;
+  line-height: 1.14;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.accent-link {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accent-link:hover, .accent-link:focus {
+  color: #2196f3;
+}
+
+.footer-address .link {
+  display: inline-block;
+}
+
+.footer-address .link:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer-box-address {
+  /* margin-right: 69px; */
+  /* По макету стоит 69px,но не корректно узазаны границы первого бдока с лого */
+  margin-right: 83px;
+}
+
+.footer-box-social {
+  margin-right: 94px;
+}
+
+.footer-social-list {
+  display: flex;
+}
+
+.footer-social-item > a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social-item > a:hover, .footer-social-item > a:focus {
+  background-color: #2196f3;
+}
+
+.footer-social-item .icon {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+}
+
+.footer-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-form-input {
+  margin-right: 12px;
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 16px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form-input:hover, .footer-form-input:focus {
+  outline: 1px solid #ffffff;
+}
+
+.footer-form-button {
+  display: inline-flex;
+  align-items: center;
+  border-width: 0;
+  padding-top: 10px;
+  padding-right: 29px;
+  padding-bottom: 10px;
+  padding-left: 28px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background-color: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form-button:hover, .footer-form-button:focus {
+  outline: 1px solid #ffffff;
+}
+
+.footer-form-button .icon {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+}
+/*# sourceMappingURL=main.css.map */

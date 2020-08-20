@@ -1,0 +1,148 @@
+/*                                          Подвал сайта */
+
+.footer {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  .container {
+    display: flex;
+    align-items: baseline;
+  }
+  .logo {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+}
+.white-studio {
+  color: $main-write-color;
+}
+
+.address-link {
+  line-height: 1.71;
+  color: $main-write-color;
+}
+
+.address-mail {
+  line-height: 1.71;
+  color: rgba(255, 255, 255, 0.6);
+}
+.address-tel {
+  line-height: 1.71;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-join {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  line-height: 1.14;
+  color: $main-write-color;
+  text-transform: uppercase;
+}
+.accent-link {
+  transition: color $transition-duration-250ms $cubic-bezier;
+  &:hover,
+  &:focus {
+    color: $hover-color;
+  }
+}
+
+.footer-address .link {
+  display: inline-block;
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.footer-box-address {
+  /* margin-right: 69px; */
+  /* По макету стоит 69px,но не корректно узазаны границы первого бдока с лого */
+  margin-right: 83px;
+}
+.footer-box-social {
+  margin-right: 94px;
+}
+.footer-social-list {
+  display: flex;
+}
+.footer-social-item > a {
+  @extend %flexCentred;
+  @include iconLinkSize(44px, 44px);
+  background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color $transition-duration-250ms $cubic-bezier;
+  &:hover,
+  &:focus {
+    background-color: $hover-color;
+  }
+}
+.footer-social-item .icon {
+  width: 20px;
+  height: 20px;
+  fill: $main-write-color;
+}
+.footer-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-form-input {
+  margin-right: 12px;
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 16px;
+
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  background-color: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow (0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: border $transition-duration-250ms $cubic-bezier;
+  &:hover,
+  &:focus {
+    outline: 1px solid $main-write-color;
+  }
+}
+.footer-form-button {
+  display: inline-flex;
+  align-items: center;
+
+  border-width: 0;
+  padding-top: 10px;
+  padding-right: 29px;
+  padding-bottom: 10px;
+  padding-left: 28px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  color: $main-write-color;
+  background-color: $hover-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: outline $transition-duration-250ms $cubic-bezier;
+  &:hover,
+  &:focus {
+    outline: 1px solid $main-write-color;
+  }
+  .icon {
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+    fill: $main-write-color;
+  }
+}
