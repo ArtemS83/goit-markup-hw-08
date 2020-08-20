@@ -1,0 +1,26 @@
+/* Логотип */
+.logo {
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  font-family: $font-logo;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.167;
+
+  &-web {
+    color: $hover-color;
+  }
+  & .black-studio {
+    color: $main-title-color;
+  }
+  // Анимация логотипа
+  &.animate__pulse {
+    animation-duration: 1000ms;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}

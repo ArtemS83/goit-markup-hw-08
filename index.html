@@ -19,47 +19,49 @@
     <!-- Шапка сайта -->
     <header class="header">
       <div class="container">
-        <nav class="nav">
-          <a class="logo link animate__pulse" href="./index.html" lang="en"
-            ><span class="logo-web">Web</span>
-            <span class="black-studio">Studio</span>
-          </a>
-          <ul class="nav-list list">
-            <li class="item">
-              <a class="nav-link current link" href="./index.html">Студия</a>
-            </li>
-            <li class="item">
-              <a class="nav-link link" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li>
-              <a class="nav-link link" href="">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <address class="address contakt">
-          <ul class="contakt-list list">
-            <li class="item">
-              <a class="contakt-link link" href="mailto:info@devstudio.com"
-                ><svg class="icon-mail">
-                  <use href="./images/sprite.svg#icon-mail"></use>
-                </svg>
-                info@devstudio.com
-              </a>
-            </li>
-            <li class="item">
-              <a class="contakt-link link" href="tel:+380961111111">
-                <svg class="icon-phone">
-                  <use href="./images/sprite.svg#icon-phone"></use>
-                </svg>
-                +38 096 111 11 11
-              </a>
-            </li>
-          </ul>
-        </address>
+        <a class="logo link animate__pulse" href="./index.html" lang="en"
+          ><span class="logo-web">Web</span>
+          <span class="black-studio">Studio</span>
+        </a>
+        <div class="menu-wrapper" data-menu>
+          <nav class="nav">
+            <ul class="nav-list list">
+              <li class="item">
+                <a class="nav-link current link" href="./index.html">Студия</a>
+              </li>
+              <li class="item">
+                <a class="nav-link link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li>
+                <a class="nav-link link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="address contakt">
+            <ul class="contakt-list list">
+              <li class="item">
+                <a class="contakt-link link" href="mailto:info@devstudio.com"
+                  ><svg class="icon-mail" width="16" height="11">
+                    <use href="./images/sprite.svg#icon-mail"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="item">
+                <a class="contakt-link link" href="tel:+380961111111">
+                  <svg class="icon-phone" width="10" height="15">
+                    <use href="./images/sprite.svg#icon-phone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </address>
+        </div>
       </div>
     </header>
     <!-- Оснавная часть -->
-    <main>
+    <main class="visually-hidden">
       <!-- Hero секция -->
       <section class="hero">
         <h1 class="hero-title">
@@ -396,7 +398,7 @@
       </section>
     </main>
     <!-- Подвал сайта -->
-    <footer class="footer">
+    <footer class="footer visually-hidden">
       <div class="container">
         <div class="footer-box-address">
           <a class="logo link" href="./index.html" lang="en"
@@ -473,7 +475,7 @@
       </div>
     </footer>
     <!--                    Модальное окно -->
-    <div class="backdrop is-hidden animate-modal" data-modal>
+    <div class="backdrop is-hidden animate-modal visually-hidden" data-modal>
       <form class="form-modal" action="#" method="get">
         <b class="form-modal-title">Оставьте свои данные, мы вам перезвоним</b>
         <button class="form-modal-button" type="button" data-modal-close>
@@ -550,6 +552,8 @@
         <button class="form-modal-btn" type="submit">Отправить</button>
       </form>
     </div>
+    <!-- Скрипт для подключения меню-бургер -->
+    <script src="./js/menu.js"></script>
     <!-- Скрипт для подключения модального окна -->
     <script src="./js/modal.js"></script>
   </body>

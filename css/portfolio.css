@@ -352,12 +352,27 @@ textarea {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  /* Линия и фон для проверки */
-  /* outline: 1px solid red; */
-  /* background-color: yellowgreen; */
+  outline: 1px solid red;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 /*                                        Шапка сайта  */
@@ -366,14 +381,33 @@ textarea {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.19;
+  line-height: 1.167;
 }
 
 .logo-web {
+  color: #2196f3;
+}
+
+.logo .black-studio {
+  color: #212121;
+}
+
+.logo.animate__pulse {
+  animation-duration: 1000ms;
+}
+
+.logoD {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.logo-webD {
   color: #188ce8;
 }
 
-.black-studio {
+.black-studioD {
   color: #000000;
 }
 
@@ -383,7 +417,7 @@ textarea {
 }
 
 /* Навигация */
-.nav-link {
+.nav-linkD {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -394,11 +428,11 @@ textarea {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-link:hover, .nav-link:focus {
+.nav-linkD:hover, .nav-linkD:focus {
   color: #2196f3;
 }
 
-.contakt-link {
+.contakt-linkD {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -406,48 +440,48 @@ textarea {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contakt-link:hover, .contakt-link:focus {
+.contakt-linkD:hover, .contakt-linkD:focus {
   color: #2196f3;
 }
 
-.header {
+.headerD {
   border-bottom: 1px solid #ececec;
 }
 
-.header .container {
+.headerD .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.nav {
+.navD {
   display: flex;
   align-items: center;
 }
 
-.nav-list {
+.nav-listD {
   display: flex;
   margin-left: 85px;
 }
 
-.contakt-list {
+.contakt-listD {
   display: flex;
   align-items: center;
 }
 
-.contakt-list .link {
+.contakt-list .linkD {
   display: flex;
 }
 
-.nav-list .item:not(:last-child) {
+.nav-list .itemD:not(:last-child) {
   margin-right: 50px;
 }
 
-.contakt-list .item:not(:last-child) {
+.contakt-list .itemD:not(:last-child) {
   margin-right: 30px;
 }
 
-.icon-mail {
+.icon-mailD {
   align-self: center;
   width: 16px;
   height: 11px;
@@ -457,12 +491,12 @@ textarea {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contakt-link:hover .icon-mail,
-.contakt-link:focus .icon-mail {
+.contakt-link:hover .icon-mailD,
+.contakt-link:focus .icon-mailD {
   fill: #2196f3;
 }
 
-.icon-phone {
+.icon-phoneD {
   align-self: center;
   width: 10px;
   height: 15px;
@@ -471,8 +505,8 @@ textarea {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contakt-link:hover .icon-phone,
-.contakt-link:focus .icon-phone {
+.contakt-link:hover .icon-phoneD,
+.contakt-link:focus .icon-phoneD {
   fill: #2196f3;
 }
 

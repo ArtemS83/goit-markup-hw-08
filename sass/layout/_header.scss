@@ -1,24 +1,7 @@
 /*                                        Шапка сайта  */
 
-/* Логотип */
-.logo {
-  font-family: $font-logo;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-}
-.logo-web {
-  color: #188ce8;
-}
-.black-studio {
-  color: #000000;
-}
-/* Анимация Логотипа */
-.animate__pulse {
-  animation-duration: 1000ms;
-}
 /* Навигация */
-.nav-link {
+.nav-linkD {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -34,7 +17,7 @@
     color: $hover-color;
   }
 }
-.contakt-link {
+.contakt-linkD {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -47,7 +30,7 @@
     color: $hover-color;
   }
 }
-.header {
+.headerD {
   border-bottom: 1px solid #ececec;
   .container {
     display: flex;
@@ -56,32 +39,32 @@
   }
 }
 
-.nav {
+.navD {
   display: flex;
   align-items: center;
 }
-.nav-list {
+.nav-listD {
   display: flex;
   margin-left: 85px;
 }
-.contakt-list {
+.contakt-listD {
   display: flex;
   align-items: center;
 }
-.contakt-list .link {
+.contakt-list .linkD {
   display: flex;
 }
 
-.nav-list .item:not(:last-child) {
+.nav-list .itemD:not(:last-child) {
   margin-right: 50px;
 }
-.contakt-list .item:not(:last-child) {
+.contakt-list .itemD:not(:last-child) {
   margin-right: 30px;
 }
-.icon-mail {
+.icon-mailD {
   align-self: center;
-  width: 16px;
-  height: 11px;
+  // width: 16px;
+  // height: 11px;
   margin-top: 1px;
   margin-right: 10px;
   fill: $text-color;
@@ -93,10 +76,10 @@
     fill: $hover-color;
   }
 }
-.icon-phone {
+.icon-phoneD {
   align-self: center;
-  width: 10px;
-  height: 15px;
+  // width: 10px;
+  // height: 15px;
   margin-right: 10px;
   fill: $text-color;
 
