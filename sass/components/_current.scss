@@ -6,10 +6,8 @@
   color: $hover-color;
   &::after {
     position: absolute;
-    left: 50%;
+    left: 0;
     bottom: 0;
-    transform: translateX(-50%);
-
     width: 100%;
 
     content: '';

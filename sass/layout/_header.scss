@@ -23,7 +23,14 @@
   margin-bottom: 10px;
   border: none;
   background-color: transparent;
-
+  &-svg {
+    fill: $main-title-color;
+    transition: fill $transition-duration-250ms $cubic-bezier;
+  }
+  &-svg:hover,
+  &-svg:focus {
+    fill: $hover-color;
+  }
   & .icon-cross {
     display: none;
   }
@@ -41,7 +48,6 @@
   }
 }
 .menu-wrapper {
-  background-color: $main-background-color;
   @media screen and (max-width: 767px) {
     position: absolute;
     top: 60px;
@@ -49,6 +55,7 @@
     width: 100%;
     padding-top: 60px;
     padding-bottom: 60px;
+    background-color: $main-background-color;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
       0px 1px 3px rgba(0, 0, 0, 0.16);
     text-align: center;
@@ -72,6 +79,11 @@
   letter-spacing: 0.02em;
   color: $main-title-color;
 
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+    line-height: 1.167;
+  }
+
   transition: color $transition-duration-250ms $cubic-bezier;
   &:hover,
   &:focus {
@@ -83,24 +95,20 @@
     padding-bottom: 32px;
   }
 }
-.contakt-linkD {
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: $text-color;
-
-  transition: color $transition-duration-250ms $cubic-bezier;
-
-  &:hover,
-  &:focus {
-    color: $hover-color;
+.nav {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: $tablet) {
+    margin-right: 84px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 305px;
   }
 }
-
 .nav-list {
   @media screen and (min-width: $tablet) {
     display: flex;
-    margin-right: 84px;
   }
 }
 .nav-listD {
@@ -113,20 +121,57 @@
     align-items: center;
   }
 }
-.contakt-list .linkD {
-  display: flex;
+.contakt-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.167;
+  letter-spacing: 0.02em;
+  color: $text-color;
+
+  transition: color $transition-duration-250ms $cubic-bezier;
+
+  &:hover,
+  &:focus {
+    color: $hover-color;
+  }
+  @media screen and (min-width: $tablet) {
+    font-size: 12px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+.nav-list .item {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: $tablet) {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
 }
 
-.nav-list .itemD:not(:last-child) {
-  margin-right: 50px;
+.contakt-list .item:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 16px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 30px;
+  }
 }
-.contakt-list .itemD:not(:last-child) {
-  margin-right: 30px;
+
+.contakt-list .link {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
 }
-.icon-mailD {
+.icon-mail {
   align-self: center;
-  // width: 16px;
-  // height: 11px;
   margin-top: 1px;
   margin-right: 10px;
   fill: $text-color;
@@ -138,10 +183,8 @@
     fill: $hover-color;
   }
 }
-.icon-phoneD {
+.icon-phone {
   align-self: center;
-  // width: 10px;
-  // height: 15px;
   margin-right: 10px;
   fill: $text-color;
 
