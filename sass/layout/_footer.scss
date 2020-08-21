@@ -1,34 +1,61 @@
 /*                                          Подвал сайта */
-
 .footer {
-  background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
+
+  background-color: #2f303a;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+  .logo {
+    margin-bottom: 20px;
+  }
   .container {
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+  }
+}
+.footer-address {
+  &-link {
+    line-height: 1.71;
+    color: $main-write-color;
+  }
+  &-mail,
+  &-tel {
+    line-height: 1.71;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+.accent-link {
+  display: inline-block;
+  transition: color $transition-duration-250ms $cubic-bezier;
+  &:hover,
+  &:focus {
+    color: $hover-color;
+  }
+  &:not(:last-child) {
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 8px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 9px;
+    }
+  }
+}
+.container-tablet {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: $tablet) {
     display: flex;
     align-items: baseline;
   }
-  .logo {
-    // display: inline-block;
-    margin-bottom: 20px;
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    justify-content: space-around;
   }
-}
-// .white-studio {
-//   color: $main-write-color;
-// }
-
-.address-link {
-  line-height: 1.71;
-  color: $main-write-color;
-}
-
-.address-mail {
-  line-height: 1.71;
-  color: rgba(255, 255, 255, 0.6);
-}
-.address-tel {
-  line-height: 1.71;
-  color: rgba(255, 255, 255, 0.6);
 }
 .footer-join {
   display: inline-block;
@@ -38,60 +65,37 @@
   color: $main-write-color;
   text-transform: uppercase;
 }
-.accent-link {
-  transition: color $transition-duration-250ms $cubic-bezier;
-  &:hover,
-  &:focus {
-    color: $hover-color;
-  }
-}
-
-.footer-address .link {
-  display: inline-block;
-  &:not(:last-child) {
-    margin-bottom: 9px;
-  }
-}
-
-.footer-box-address {
-  /* margin-right: 69px; */
-  /* По макету стоит 69px,но не корректно узазаны границы первого бдока с лого */
-  margin-right: 83px;
-}
-.footer-box-social {
-  margin-right: 94px;
-}
 .footer-social-list {
   display: flex;
+  justify-content: center;
 }
-.footer-social-item > a {
-  @extend %flexCentred;
-  @include iconLinkSize(44px, 44px);
-  background-color: rgba(255, 255, 255, 0.1);
+.footer-social-item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+  & > a {
+    @extend %flexCentred;
+    @include iconLinkSize(44px, 44px);
+    background-color: rgba(255, 255, 255, 0.1);
 
-  transition: background-color $transition-duration-250ms $cubic-bezier;
-  &:hover,
-  &:focus {
-    background-color: $hover-color;
+    transition: background-color $transition-duration-250ms $cubic-bezier;
+    &:hover,
+    &:focus {
+      background-color: $hover-color;
+    }
+  }
+  .icon {
+    fill: $main-write-color;
   }
 }
-.footer-social-item .icon {
-  width: 20px;
-  height: 20px;
-  fill: $main-write-color;
-}
-.footer-social-item:not(:last-child) {
-  margin-right: 10px;
-}
-
 .footer-form-input {
-  margin-right: 12px;
-  width: 358px;
   height: 50px;
+  margin-right: auto;
+  margin-left: auto;
   padding-left: 16px;
   padding-top: 15px;
-  padding-bottom: 15px;
   padding-right: 16px;
+  padding-bottom: 15px;
 
   font-family: $main-font;
   font-style: normal;
@@ -107,10 +111,21 @@
   border-radius: 4px;
   cursor: pointer;
 
-  transition: border $transition-duration-250ms $cubic-bezier;
+  transition: outline $transition-duration-250ms $cubic-bezier;
   &:hover,
   &:focus {
     outline: 1px solid $main-write-color;
+  }
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+  }
+  @media screen and (max-width: 1199px) {
+    display: block;
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+    margin-right: 12px;
   }
 }
 .footer-form-button {
@@ -141,8 +156,16 @@
   }
   .icon {
     margin-left: 10px;
-    width: 24px;
-    height: 24px;
     fill: $main-write-color;
+  }
+}
+
+.footer-box-address {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: $desktop) {
+    // По макету стоит 69px,но не корректно узазаны границы первого бдока с лого
+    margin-right: 83px;
   }
 }

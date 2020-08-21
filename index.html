@@ -416,64 +416,69 @@
       </section>
     </main>
     <!-- Подвал сайта -->
-    <footer class="footer visually-hidden">
+    <footer class="footer">
       <div class="container">
-        <div class="footer-box-address">
-          <a class="logo link" href="./index.html" lang="en"
-            ><span class="logo-web">Web</span>
-            <span class="white-studio">Studio</span></a
-          >
-          <address class="address footer-address">
-            <a
-              class="address-link accent-link link"
-              href="https://goo.gl/maps/9TEdyr7UyNeiwYUK7"
-              target="_blank"
-              >г. Киев, пр-т Леси Украинки, 26</a
-            ><br />
-            <a
-              class="address-mail accent-link link"
-              href="mailto:info@example.com"
-              >info@example.com</a
-            ><br />
-            <a class="address-tel accent-link link" href="tel:+380991111111"
-              >+38 099 111 11 11</a
+        <div class="container-tablet">
+          <div class="footer-box-address">
+            <a class="logo link" href="./index.html" lang="en"
+              ><span class="logo-web">Web</span>
+              <span class="white-studio">Studio</span></a
             >
-          </address>
+            <address class="address footer-address">
+              <a
+                class="footer-address-link accent-link link"
+                href="https://goo.gl/maps/9TEdyr7UyNeiwYUK7"
+                target="_blank"
+                >г. Киев, пр-т Леси Украинки, 26</a
+              ><br />
+              <a
+                class="footer-address-mail accent-link link"
+                href="mailto:info@example.com"
+                >info@example.com</a
+              ><br />
+              <a
+                class="footer-address-tel accent-link link"
+                href="tel:+380991111111"
+                >+38 099 111 11 11</a
+              >
+            </address>
+          </div>
+
+          <div class="footer-box-social">
+            <b class="footer-join">присоединяйтесь</b>
+            <ul class="footer-social-list list">
+              <li class="footer-social-item">
+                <a href="" target="_blank" aria-label="иконка инстаграма"
+                  ><svg class="icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a href="" target="_blank" aria-label="иконка твитера"
+                  ><svg class="icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a href="" target="_blank" aria-label="иконка фейсбука">
+                  <svg class="icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a href="" target="_blank" aria-label="иконка ликедина"
+                  ><svg class="icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div class="footer-box-social">
-          <b class="footer-join">присоединяйтесь</b>
-          <ul class="footer-social-list list">
-            <li class="footer-social-item">
-              <a href="" target="_blank" aria-label="иконка инстаграма"
-                ><svg class="icon">
-                  <use href="./images/sprite.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a href="" target="_blank" aria-label="иконка твитера"
-                ><svg class="icon">
-                  <use href="./images/sprite.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a href="" target="_blank" aria-label="иконка фейсбука">
-                <svg class="icon">
-                  <use href="./images/sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a href="" target="_blank" aria-label="иконка ликедина"
-                ><svg class="icon">
-                  <use href="./images/sprite.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
         <div class="footer-box-form">
           <b class="footer-join">Подпишитесь на рассылку</b>
           <form class="footer-form" action="#" method="get">
@@ -484,7 +489,7 @@
               placeholder="E-mail"
             /><button class="footer-form-button" type="submit">
               Подписаться
-              <svg class="icon">
+              <svg class="icon" width="24" height="24">
                 <use href="./images/sprite.svg#icon-send"></use>
               </svg>
             </button>
