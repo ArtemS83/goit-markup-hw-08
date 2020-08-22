@@ -1,9 +1,41 @@
 /*                                Секция Портфолио */
 .main-portfolio {
-  padding-top: 93px;
-  margin-bottom: 94px;
+  @media screen and (max-width: 1199px) {
+    padding-top: 60px;
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-top: 93px;
+    margin-bottom: 94px;
+  }
 }
+.filter {
+  // margin-bottom: 25px;
 
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
+  .filter-item {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 15px;
+    }
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+  .list {
+    display: flex;
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+    }
+    @media screen and (min-width: $tablet) {
+      justify-content: center;
+    }
+  }
+}
 .filter-button {
   border-width: 0;
   padding-top: 6px;
@@ -44,15 +76,12 @@
     border-color: transparent;
   }
 }
-.filter .filter-item:not(:last-child) {
-  margin-right: 8px;
+.portfolio {
+  @media screen and (max-width: 767px) {
+    margin-top: 25px;
+  }
 }
-.filter > .list {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-.portfolio-name {
+.portfolio-nameD {
   margin-top: 0;
   margin-bottom: 4px;
 
@@ -62,10 +91,10 @@
 
   color: $main-title-color;
 }
-.portfolio-web,
-.portfolio-design,
-.portfolio-app,
-.portfolio-marketing {
+.portfolio-webD,
+.portfolio-designD,
+.portfolio-appD,
+.portfolio-marketingD {
   margin-top: 0;
   margin-bottom: 0;
 
@@ -75,11 +104,11 @@
   color: $text-color;
 }
 
-.portfolio > .list {
+.portfolio > .listD {
   display: flex;
   flex-wrap: wrap;
 }
-.portfolio-link {
+.portfolio-linkD {
   display: block;
   transition: box-shadow $transition-duration-250ms $cubic-bezier;
   &:hover,
@@ -88,7 +117,7 @@
       0px 1px 1px rgba(0, 0, 0, 0.12);
   }
 }
-.portfolio-card {
+.portfolio-cardD {
   padding-top: 20px;
   padding-right: 24px;
   padding-bottom: 20px;
@@ -99,18 +128,18 @@
   border-left: 1px solid #eeeeee;
 }
 /* Кроме каждого третьего */
-.portfolio-item:not(:nth-child(3n)) {
+.portfolio-itemD:not(:nth-child(3n)) {
   margin-right: 30px;
 }
 /* Кроме трех  последних с конца */
-.portfolio-item:not(:nth-last-child(-n + 3)) {
+.portfolio-itemD:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
 }
-.portfolio-thumb {
+.portfolio-thumbD {
   position: relative;
   overflow: hidden;
 }
-.portfolio-about {
+.portfolio-abouDt {
   position: absolute;
   bottom: 0;
   left: 0;

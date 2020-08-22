@@ -637,6 +637,183 @@ textarea {
   fill: #2196f3;
 }
 
+/*                                Секция Портфолио */
+@media screen and (max-width: 1199px) {
+  .main-portfolio {
+    padding-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-portfolio {
+    padding-top: 93px;
+    margin-bottom: 94px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filter {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .filter .filter-item {
+    margin-bottom: 15px;
+  }
+}
+
+.filter .filter-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter .list {
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .filter .list {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter .list {
+    justify-content: center;
+  }
+}
+
+.filter-button {
+  border-width: 0;
+  padding-top: 6px;
+  padding-right: 22px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  margin: 0;
+  outline: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+  text-align: center;
+  background-color: #f5f4fa;
+  color: #212121;
+  border-radius: 4px;
+  border-color: transparent;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-button:hover, .filter-button:focus {
+  background-color: #2196f3;
+  color: #ffffff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.filter-button.current {
+  background-color: #2196f3;
+  color: #ffffff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
+  border-color: transparent;
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio {
+    margin-top: 25px;
+  }
+}
+
+.portfolio-nameD {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: #212121;
+}
+
+.portfolio-webD,
+.portfolio-designD,
+.portfolio-appD,
+.portfolio-marketingD {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.88;
+  color: #757575;
+}
+
+.portfolio > .listD {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-linkD {
+  display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-linkD:hover, .portfolio-linkD:focus {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-cardD {
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
+/* Кроме каждого третьего */
+.portfolio-itemD:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+/* Кроме трех  последних с конца */
+.portfolio-itemD:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+
+.portfolio-thumbD {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-abouDt {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 63px;
+  padding-right: 24px;
+  padding-bottom: 63px;
+  padding-left: 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  background-color: rgba(33, 150, 243, 0.9);
+  color: #ffffff;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-link:hover .portfolio-abouDt,
+.portfolio-link:focus .portfolio-abouDt {
+  transform: translateY(0);
+}
+
 /*                                          Подвал сайта */
 .footer {
   padding-top: 60px;
