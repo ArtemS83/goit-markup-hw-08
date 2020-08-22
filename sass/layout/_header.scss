@@ -48,6 +48,7 @@
   }
 }
 .menu-wrapper {
+  z-index: 10;
   @media screen and (max-width: $tablet - 1px) {
     position: absolute;
     top: 60px;

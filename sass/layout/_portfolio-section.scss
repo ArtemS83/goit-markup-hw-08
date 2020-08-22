@@ -9,6 +9,7 @@
     margin-bottom: 94px;
   }
 }
+// Кнопки-фильтры
 .filter {
   // margin-bottom: 25px;
 
@@ -76,48 +77,111 @@
     border-color: transparent;
   }
 }
+// Карточки портфолио
 .portfolio {
   @media screen and (max-width: $tablet - 1px) {
     margin-top: 25px;
   }
-}
-.portfolio-nameD {
-  margin-top: 0;
-  margin-bottom: 4px;
-
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-
-  color: $main-title-color;
-}
-.portfolio-webD,
-.portfolio-designD,
-.portfolio-appD,
-.portfolio-marketingD {
-  margin-top: 0;
-  margin-bottom: 0;
-
-  font-size: 16px;
-  line-height: 1.88;
-
-  color: $text-color;
-}
-
-.portfolio > .listD {
-  display: flex;
-  flex-wrap: wrap;
-}
-.portfolio-linkD {
-  display: block;
-  transition: box-shadow $transition-duration-250ms $cubic-bezier;
-  &:hover,
-  &:focus {
-    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
-      0px 1px 1px rgba(0, 0, 0, 0.12);
+  .list {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 }
-.portfolio-cardD {
+.portfolio-item {
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 60px) / 3);
+  }
+  img {
+    width: 100%;
+    height: 294px;
+  }
+  // Кроме каждого второго
+  &:not(:nth-child(2n)) {
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+      margin-right: 30px;
+    }
+  }
+  // Кроме каждого третьего
+  &:not(:nth-child(3n)) {
+    @media screen and (min-width: $desktop) {
+      margin-right: 30px;
+    }
+  }
+  &:not(:last-child) {
+    @media screen and (max-width: $tablet - 1px) {
+      margin-bottom: 30px;
+    }
+  }
+  //  Кроме двух  последних с конца
+  &:not(:nth-last-child(-n + 2)) {
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+      margin-bottom: 30px;
+    }
+  }
+  //  Кроме трех  последних с конца
+  &:not(:nth-last-child(-n + 3)) {
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 30px;
+    }
+  }
+}
+// Оверлоу "Технокряк"
+.portfolio-thumb {
+  position: relative;
+  overflow: hidden;
+  .portfolio-about {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    font-size: 18px;
+    line-height: 1.56;
+    background-color: rgba(33, 150, 243, 0.9);
+    color: $main-write-color;
+
+    transform: translateY(100%);
+    transition: transform $transition-duration-250ms $cubic-bezier;
+
+    .portfolio-link:hover &,
+    .portfolio-link:focus & {
+      transform: translateY(0);
+    }
+    // Когда текст не помещается при вьюпорте меньше 480px
+    @media screen and (max-width: $mobile - 1px) {
+      padding-top: 20px;
+      overflow: scroll;
+    }
+    //    /////////////
+    @media screen and (min-width: $mobile) {
+      padding-top: 77px;
+      padding-bottom: 77px;
+    }
+    @media screen and (min-width: $tablet) {
+      padding-top: 49px;
+      padding-bottom: 49px;
+    }
+    @media screen and (min-width: $desktop) {
+      padding-top: 63px;
+      padding-bottom: 63px;
+    }
+  }
+}
+.portfolio-card {
   padding-top: 20px;
   padding-right: 24px;
   padding-bottom: 20px;
@@ -126,42 +190,41 @@
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
-}
-/* Кроме каждого третьего */
-.portfolio-itemD:not(:nth-child(3n)) {
-  margin-right: 30px;
-}
-/* Кроме трех  последних с конца */
-.portfolio-itemD:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 30px;
-}
-.portfolio-thumbD {
-  position: relative;
-  overflow: hidden;
-}
-.portfolio-abouDt {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  .portfolio-name {
+    margin-top: 0;
+    margin-bottom: 4px;
 
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 63px;
-  padding-right: 24px;
-  padding-bottom: 63px;
-  padding-left: 24px;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
 
-  font-size: 18px;
-  line-height: 1.56;
-  background-color: rgba(33, 150, 243, 0.9);
-  color: $main-write-color;
+    color: $main-title-color;
+    @media screen and (min-width: $mobile) {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .portfolio-web,
+  .portfolio-design,
+  .portfolio-app,
+  .portfolio-marketing {
+    margin-top: 0;
+    margin-bottom: 0;
 
-  transform: translateY(100%);
-  transition: transform $transition-duration-250ms $cubic-bezier;
-  .portfolio-link:hover &,
-  .portfolio-link:focus & {
-    transform: translateY(0);
+    font-size: 16px;
+    line-height: 1.88;
+
+    color: $text-color;
+  }
+}
+
+.portfolio-link {
+  display: block;
+  transition: box-shadow $transition-duration-250ms $cubic-bezier;
+  &:hover,
+  &:focus {
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      0px 1px 1px rgba(0, 0, 0, 0.12);
   }
 }
