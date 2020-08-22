@@ -4,7 +4,7 @@
   padding-bottom: 60px;
 
   background-color: #2f303a;
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: $desktop - 1px) {
     text-align: center;
   }
   .logo {
@@ -29,6 +29,15 @@
     color: rgba(255, 255, 255, 0.6);
   }
 }
+.footer-box-address {
+  @media screen and (max-width: $tablet - 1px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: $desktop) {
+    // По макету стоит 69px,но не корректно узазаны границы первого бдока с лого
+    margin-right: 83px;
+  }
+}
 .accent-link {
   display: inline-block;
   transition: color $transition-duration-250ms $cubic-bezier;
@@ -37,7 +46,7 @@
     color: $hover-color;
   }
   &:not(:last-child) {
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: $desktop - 1px) {
       margin-bottom: 8px;
     }
     @media screen and (min-width: $desktop) {
@@ -46,14 +55,14 @@
   }
 }
 .container-tablet {
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: $desktop - 1px) {
     margin-bottom: 60px;
   }
   @media screen and (min-width: $tablet) {
     display: flex;
     align-items: baseline;
   }
-  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
     justify-content: space-around;
   }
 }
@@ -88,7 +97,20 @@
     fill: $main-write-color;
   }
 }
+.footer-form {
+  @media screen and (max-width: $desktop - 1px) {
+    max-width: 450px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
+}
 .footer-form-input {
+  width: 100%;
   height: 50px;
   margin-right: auto;
   margin-left: auto;
@@ -116,10 +138,8 @@
   &:focus {
     outline: 1px solid $main-write-color;
   }
-  @media screen and (min-width: $mobile) {
-    width: 450px;
-  }
-  @media screen and (max-width: 1199px) {
+
+  @media screen and (max-width: $desktop - 1px) {
     display: block;
     margin-bottom: 20px;
   }
@@ -129,8 +149,8 @@
   }
 }
 .footer-form-button {
-  display: inline-flex;
-  align-items: center;
+  @extend %flexCentred;
+  width: 200px;
 
   border-width: 0;
   padding-top: 10px;
@@ -154,18 +174,12 @@
   &:focus {
     outline: 1px solid $main-write-color;
   }
+  @media screen and (max-width: $desktop - 1px) {
+    margin-right: auto;
+    margin-left: auto;
+  }
   .icon {
     margin-left: 10px;
     fill: $main-write-color;
-  }
-}
-
-.footer-box-address {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 60px;
-  }
-  @media screen and (min-width: $desktop) {
-    // По макету стоит 69px,но не корректно узазаны границы первого бдока с лого
-    margin-right: 83px;
   }
 }

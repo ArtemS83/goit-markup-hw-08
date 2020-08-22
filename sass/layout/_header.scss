@@ -10,7 +10,7 @@
   }
 }
 .menu-container {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $tablet - 1px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,7 +48,7 @@
   }
 }
 .menu-wrapper {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $tablet - 1px) {
     position: absolute;
     top: 60px;
     left: 0;
@@ -79,7 +79,7 @@
   letter-spacing: 0.02em;
   color: $main-title-color;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $tablet - 1px) {
     font-size: 18px;
     line-height: 1.167;
   }
@@ -96,7 +96,7 @@
   }
 }
 .nav {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $tablet - 1px) {
     margin-bottom: 60px;
   }
   @media screen and (min-width: $tablet) {
@@ -139,7 +139,7 @@
   }
 }
 .nav-list .item {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $tablet - 1px) {
     margin-bottom: 40px;
   }
   @media screen and (min-width: $tablet) {
@@ -150,10 +150,10 @@
 }
 
 .contakt-list .item:not(:last-child) {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $tablet - 1px) {
     margin-bottom: 16px;
   }
-  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
     margin-bottom: 10px;
   }
   @media screen and (min-width: $desktop) {
