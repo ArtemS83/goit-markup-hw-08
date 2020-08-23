@@ -412,6 +412,7 @@ textarea {
 
 /*                                        Шапка сайта  */
 .header {
+  position: relative;
   border-bottom: 1px solid #ececec;
 }
 
@@ -473,7 +474,7 @@ textarea {
 @media screen and (max-width: 767px) {
   .menu-wrapper {
     position: absolute;
-    top: 60px;
+    top: 100%;
     left: 0;
     width: 100%;
     padding-top: 60px;

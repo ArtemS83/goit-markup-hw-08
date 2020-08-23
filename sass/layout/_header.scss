@@ -1,5 +1,6 @@
 /*                                        Шапка сайта  */
 .header {
+  position: relative;
   border-bottom: 1px solid #ececec;
   @media screen and (min-width: $tablet) {
     .container {
@@ -51,7 +52,7 @@
   z-index: 10;
   @media screen and (max-width: $tablet - 1px) {
     position: absolute;
-    top: 60px;
+    top: 100%;
     left: 0;
     width: 100%;
     padding-top: 60px;
