@@ -27,12 +27,19 @@
   }
   &-item {
     margin: 15px;
+    width: calc((100% - 4 * 15px) / 2);
+    @media screen and (min-width: $tablet) {
+      width: calc((100% - 6 * 15px) / 3);
+    }
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - 12 * 15px) / 6);
+    }
   }
 }
 
 .customers-item > a {
   @extend %flexCentred;
-  @include iconLinkSize(210px, 90px, 4px);
+  @include iconLinkSize(100%, 90px, 4px);
   border: 1px solid #afb1b8;
 
   background-color: $main-background-color;
@@ -41,12 +48,6 @@
   &:hover,
   &:focus {
     border-color: $hover-color;
-  }
-  @media screen and (min-width: $tablet) {
-    @include iconLinkSize(226px, 90px, 4px);
-  }
-  @media screen and (min-width: $desktop) {
-    @include iconLinkSize(170px, 90px, 4px);
   }
 }
 
