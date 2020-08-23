@@ -49,11 +49,11 @@
   }
 }
 .menu-wrapper {
-  z-index: 10;
   @media screen and (max-width: $tablet - 1px) {
     position: absolute;
     top: 100%;
     left: 0;
+    z-index: 10;
     width: 100%;
     padding-top: 60px;
     padding-bottom: 60px;
