@@ -1,24 +1,38 @@
 /* Секция Постоянные клиенты */
 .customers {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
   &-title {
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
-    font-size: 36px;
-    line-height: 1.17;
+    font-size: 28px;
+    line-height: 1.18;
     text-align: center;
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 50px;
+      font-size: 36px;
+      line-height: 1.17;
+    }
+  }
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  &-item {
+    margin: 15px;
   }
 }
 
-.customers-list {
-  display: flex;
-  justify-content: space-between;
-}
 .customers-item > a {
   @extend %flexCentred;
-  @include iconLinkSize(170px, 90px, 4px);
+  @include iconLinkSize(210px, 90px, 4px);
   border: 1px solid #afb1b8;
 
   background-color: $main-background-color;
@@ -27,6 +41,12 @@
   &:hover,
   &:focus {
     border-color: $hover-color;
+  }
+  @media screen and (min-width: $tablet) {
+    @include iconLinkSize(226px, 90px, 4px);
+  }
+  @media screen and (min-width: $desktop) {
+    @include iconLinkSize(170px, 90px, 4px);
   }
 }
 

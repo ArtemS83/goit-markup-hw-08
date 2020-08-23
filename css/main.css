@@ -257,7 +257,7 @@ summary {
   display: list-item;
 }
 
-.footer-social-item > a, .footer-form-button {
+.customers-item > a, .footer-social-item > a, .footer-form-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -861,6 +861,84 @@ textarea {
   text-transform: uppercase;
   background-color: rgba(47, 48, 58, 0.8);
   color: #ffffff;
+}
+
+/* Секция Постоянные клиенты */
+.customers {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .customers {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.customers-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .customers-title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
+}
+
+.customers-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.customers-item {
+  margin: 15px;
+}
+
+.customers-item > a {
+  width: 210px;
+  height: 90px;
+  border-radius: 4px;
+  border: 1px solid #afb1b8;
+  background-color: #ffffff;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customers-item > a:hover, .customers-item > a:focus {
+  border-color: #2196f3;
+}
+
+@media screen and (min-width: 768px) {
+  .customers-item > a {
+    width: 226px;
+    height: 90px;
+    border-radius: 4px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .customers-item > a {
+    width: 170px;
+    height: 90px;
+    border-radius: 4px;
+  }
+}
+
+.customers-icon {
+  fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customers-item > a:hover .customers-icon,
+.customers-item > a:focus .customers-icon {
+  fill: #2196f3;
 }
 
 /*                                          Подвал сайта */
