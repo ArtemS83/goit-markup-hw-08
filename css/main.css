@@ -642,6 +642,84 @@ textarea {
   fill: #2196f3;
 }
 
+/* Секция О нас */
+.about {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+  .about {
+    padding-top: 94px;
+    padding-bottom: 47px;
+  }
+}
+
+.about-name {
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.about-description {
+  margin: 0;
+  line-height: 1.71;
+  color: #757575;
+}
+
+.about-bg {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about-item {
+    width: calc((100% - 90px) / 4);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about-item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .about-item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .about-item:not(:nth-child(2n)) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 /*              Чем занимаемся секция */
 .offer {
   padding-top: 47px;
