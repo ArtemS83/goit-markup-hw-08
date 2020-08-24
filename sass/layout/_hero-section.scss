@@ -64,7 +64,7 @@
   }
   // Приспособил js от бургер-меню для укрытия секции
   @media screen and (max-width: $tablet - 1px) {
-    &.is-open {
+    &.close {
       display: none;
     }
   }
