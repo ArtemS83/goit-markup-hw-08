@@ -91,7 +91,7 @@
 }
 .portfolio-item {
   @media screen and (min-width: $mobile) {
-    width: 450px;
+    width: 480px;
   }
   @media screen and (min-width: $tablet) {
     width: calc((100% - 30px) / 2);
