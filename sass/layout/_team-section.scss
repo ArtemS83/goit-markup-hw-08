@@ -1,14 +1,36 @@
 /* Секция Наша команда */
 
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: $background-color;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  &-title {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    font-size: 28px;
+    line-height: 1.18;
+    text-align: center;
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 50px;
+
+      font-size: 36px;
+      line-height: 1.17;
+    }
+  }
+  &-list {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+    }
+  }
 }
-.team-list {
-  display: flex;
-}
-.team-item {
+
+.team-itemD {
   display: block;
   width: 270px;
 
@@ -22,17 +44,13 @@
     margin-right: 30px;
   }
 }
-
-.team-title {
-  margin-top: 0;
-  margin-bottom: 50px;
-
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
+.team-cardD {
+  padding-top: 30px;
+  padding-bottom: 24px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
-
-.team-name {
+.team-nameD {
   margin-top: 0;
   margin-bottom: 10px;
 
@@ -41,7 +59,7 @@
   line-height: 1.19;
   text-align: center;
 }
-.team-position {
+.team-positionD {
   margin-top: 0;
   margin-bottom: 16px;
 
@@ -54,22 +72,14 @@
 .name-social-list {
   display: flex;
   justify-content: space-between;
-}
-
-.team-card {
-  padding-top: 30px;
-  padding-bottom: 24px;
-  padding-left: 32px;
-  padding-right: 32px;
-}
-
-.name-social-item > a {
-  @extend %flexCentred;
-  @include iconLinkSize(44px, 44px);
-  transition: background-color $transition-duration-250ms $cubic-bezier;
-  &:hover,
-  &:focus {
-    background-color: $hover-color;
+  &-item > a {
+    @extend %flexCentred;
+    @include iconLinkSize(44px, 44px);
+    transition: background-color $transition-duration-250ms $cubic-bezier;
+    &:hover,
+    &:focus {
+      background-color: $hover-color;
+    }
   }
 }
 .name-social-icon {
