@@ -11,7 +11,7 @@
 }
 // Кнопки-фильтры
 .filter {
-  // margin-bottom: 25px;
+  margin-bottom: 40px;
 
   @media screen and (min-width: $tablet) {
     margin-bottom: 30px;
@@ -19,22 +19,24 @@
   @media screen and (min-width: $desktop) {
     margin-bottom: 50px;
   }
-  .filter-item {
-    @media screen and (max-width: $tablet - 1px) {
-      margin-bottom: 15px;
-    }
-    &:not(:last-child) {
-      margin-right: 8px;
-    }
-  }
   .list {
     display: flex;
+    margin-left: -4px;
+    margin-right: -4px;
+    margin-top: -8px;
+    margin-bottom: -8px;
     @media screen and (max-width: $tablet - 1px) {
       flex-wrap: wrap;
     }
     @media screen and (min-width: $tablet) {
       justify-content: center;
     }
+  }
+  &-item {
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 8px;
+    margin-bottom: 8px;
   }
 }
 .filter-button {
@@ -80,7 +82,7 @@
 // Карточки портфолио
 .portfolio {
   @media screen and (max-width: $tablet - 1px) {
-    margin-top: 25px;
+    // margin-top: 25px;
   }
   .list {
     @media screen and (min-width: $tablet) {
