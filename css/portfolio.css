@@ -284,6 +284,10 @@ body {
   background-color: #ffffff;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 /*                                    Общие сбросы свойств */
 /* Убираем точки и отступы в списках */
 .list {

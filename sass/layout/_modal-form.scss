@@ -7,6 +7,11 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   overflow-y: scroll;
+  @media screen and (max-width: $tablet - 1px) {
+    padding-top: 93px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   &.is-hidden {
     opacity: 0;
     pointer-events: none;
@@ -14,18 +19,21 @@
 }
 
 .form-modal {
-  min-width: 450px;
+  position: absolute;
+
+  max-width: 450px;
+  width: 100%;
   min-height: 609px;
+
   text-align: center;
   @media screen and (min-width: $tablet) {
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
   @media screen and (min-width: $desktop) {
-    min-width: 528px;
+    max-width: 528px;
     min-height: 581px;
   }
 
@@ -41,9 +49,12 @@
   border-radius: 4px;
 }
 .form-modal-title {
+  // display: inline-block;
+  // margin-bottom: 30px;
+
   font-size: 20px;
   line-height: 1.5px;
-  margin-bottom: 30px;
+
   @media screen and (min-width: $desktop) {
     line-height: 1.15;
   }
@@ -87,6 +98,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
   margin-bottom: 28px;
 }
 

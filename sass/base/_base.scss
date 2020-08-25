@@ -17,6 +17,10 @@ body {
   color: $main-title-color;
 
   background-color: $main-background-color;
+  // Через js добавлем класс,чтобы убрать скролл страницы при открытой модалке
+  &.modal-open {
+    overflow: hidden;
+  }
 }
 /*                                    Общие сбросы свойств */
 /* Убираем точки и отступы в списках */

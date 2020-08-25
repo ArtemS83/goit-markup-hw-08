@@ -284,6 +284,10 @@ body {
   background-color: #ffffff;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 /*                                    Общие сбросы свойств */
 /* Убираем точки и отступы в списках */
 .list {
@@ -747,13 +751,23 @@ textarea {
   overflow-y: scroll;
 }
 
+@media screen and (max-width: 767px) {
+  .backdrop {
+    padding-top: 93px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
 
 .form-modal {
-  min-width: 450px;
+  position: absolute;
+  max-width: 450px;
+  width: 100%;
   min-height: 609px;
   text-align: center;
   padding-left: 40px;
@@ -767,7 +781,6 @@ textarea {
 
 @media screen and (min-width: 768px) {
   .form-modal {
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -776,7 +789,7 @@ textarea {
 
 @media screen and (min-width: 1200px) {
   .form-modal {
-    min-width: 528px;
+    max-width: 528px;
     min-height: 581px;
   }
 }
@@ -784,7 +797,6 @@ textarea {
 .form-modal-title {
   font-size: 20px;
   line-height: 1.5px;
-  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -830,6 +842,7 @@ textarea {
   position: relative;
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
   margin-bottom: 28px;
 }
 
