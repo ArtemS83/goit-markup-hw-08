@@ -75,7 +75,7 @@
   background-color: $main-background-color;
 
   @media screen and (min-width: $mobile) {
-    width: 480px;
+    width: 450px;
   }
   @media screen and (min-width: $tablet) {
     width: calc((100% - 4 * 15px) / 2);
