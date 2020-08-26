@@ -633,6 +633,12 @@ textarea {
 .portfolio-item img {
   width: 100%;
   height: 294px;
+  height: auto;
+}
+@media screen and (min-width: 480px) {
+  .portfolio-item img {
+    height: 294px;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .portfolio-item:not(:nth-child(2n)) {
@@ -673,8 +679,10 @@ textarea {
   margin-bottom: 0;
   padding-left: 24px;
   padding-right: 24px;
-  font-size: 18px;
-  line-height: 1.56;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 15px;
+  line-height: 1.26;
   background-color: rgba(33, 150, 243, 0.9);
   color: #fff;
   -webkit-transform: translateY(100%);
@@ -693,16 +701,12 @@ textarea {
   -ms-transform: translateY(0);
   transform: translateY(0);
 }
-@media screen and (max-width: 479px) {
-  .portfolio-thumb .portfolio-about {
-    padding-top: 20px;
-    overflow: scroll;
-  }
-}
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 440px) {
   .portfolio-thumb .portfolio-about {
     padding-top: 77px;
     padding-bottom: 77px;
+    font-size: 18px;
+    line-height: 1.56;
   }
 }
 @media screen and (min-width: 768px) {

@@ -104,6 +104,10 @@
   img {
     width: 100%;
     height: 294px;
+    height: auto;
+    @media screen and (min-width: $mobile) {
+      height: 294px;
+    }
   }
   // Кроме каждого второго
   &:not(:nth-child(2n)) {
@@ -150,9 +154,11 @@
     margin-bottom: 0;
     padding-left: 24px;
     padding-right: 24px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 
-    font-size: 18px;
-    line-height: 1.56;
+    font-size: 15px;
+    line-height: 1.26;
     background-color: rgba(33, 150, 243, 0.9);
     color: $main-write-color;
 
@@ -163,15 +169,12 @@
     .portfolio-link:focus & {
       transform: translateY(0);
     }
-    // Когда текст не помещается при вьюпорте меньше 480px
-    @media screen and (max-width: $mobile - 1px) {
-      padding-top: 20px;
-      overflow: scroll;
-    }
-    //    /////////////
-    @media screen and (min-width: $mobile) {
+
+    @media screen and (min-width: $mobile - 40px) {
       padding-top: 77px;
       padding-bottom: 77px;
+      font-size: 18px;
+      line-height: 1.56;
     }
     @media screen and (min-width: $tablet) {
       padding-top: 49px;

@@ -283,6 +283,8 @@ color: red;
   border-radius: 2px;
   fill: $main-write-color;
   cursor: pointer;
+  // Для не сжимания чекбокса при сужении
+  flex-shrink: 0;
 
   transition: border-color $transition-duration-250ms $cubic-bezier,
     background-color $transition-duration-250ms $cubic-bezier,
